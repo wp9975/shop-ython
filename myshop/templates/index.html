@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Shop</title>
+</head>
+<body>
+    <h1>Welcome to My Shop!</h1>
+    <ul>
+    {% for product in products %}
+        <li>
+            <a href="{{ url_for('product', id=product.id) }}">
+                {{ product.name }} - {{ product.price }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
